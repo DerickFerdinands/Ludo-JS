@@ -1,0 +1,129 @@
+body{
+    height: 100vh;
+    width: 99vw;
+    background: #00245A !important;
+    transform-style: preserve-3d;
+    font-size: 70px;
+    perspective: 114em;
+    perspective-origin: 0% 50%;
+    overflow: hidden;
+}
+main{
+    transform-style: preserve-3d;
+    height: 100vh;
+    width: 99vw;
+    transform: rotateX(63deg) translateX(-100px);
+}
+
+main>section{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: .9;
+    box-shadow: 0 0 0.5em rgba(64, 60, 60, 0.76) inset;
+}
+.boardSurface{
+    position: absolute;
+    inset:0;
+    margin: auto;
+    height:1000px;
+    aspect-ratio: 1/1;
+    transform-style: preserve-3d !important;
+    perspective: 50em;
+    perspective-origin: -12% 150%;
+}
+.boardSurface>section{
+    transform-style: preserve-3d !important;
+    position: absolute;
+    height:250px;
+    aspect-ratio: 1/1;
+}
+.boardSurface>section:nth-of-type(1){
+    top: 0;
+    left: 0;
+}
+
+.boardSurface>section:nth-of-type(2){
+    top: 0;
+    right: 0;
+}
+.boardSurface>section:nth-of-type(3){
+    bottom: 0;
+    left: 0;
+}
+
+.boardSurface>section:nth-of-type(4){
+    bottom: 0;
+    right: 0;
+}
+
+.boardSurface:nth-of-type(2){
+    transform: translateZ(-70px);
+}
+
+.boardSides{
+    position: absolute;
+    inset:0;
+    margin: auto;
+    height:1000px;
+    width: 70px;
+    transform: translateZ(-70px);
+}
+
+.boardSides:nth-of-type(3){
+    transform: rotateY(270deg) translateZ(500px) translateY(0px) translateX(-35px);
+}
+
+.boardSides:nth-of-type(4){
+    transform: rotateY(90deg) translateZ(500px) translateY(0px) translateX(35px);
+}
+
+.boardSides:nth-of-type(5){
+    transform: rotateY(90deg) rotateX(90deg) translateZ(500px) translateY(0px) translateX(35px);
+}
+
+.boardSides:nth-of-type(6){
+    transform: rotateY(90deg) rotateX(270deg) translateZ(500px) translateY(0px) translateX(35px);
+}
+
+.playerSurface{
+    position: absolute;
+    inset:0;
+    margin: auto;
+    height:250px;
+    aspect-ratio: 1/1;
+    transform-style: preserve-3d !important;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 0.5em rgba(64, 60, 60, 0.76) inset;
+}
+
+.playerSurface:nth-of-type(2){
+    transform: translateZ(30px);
+}
+
+.playerSides{
+    position: absolute;
+    inset:0;
+    margin: auto;
+    height:250px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    transform: translateZ(-70px);
+    box-shadow: 0 0 0.5em rgba(64, 60, 60, 0.76) inset;
+}
+
+.playerSides:nth-of-type(3){
+    transform: rotateY(270deg) translateZ(calc(250px/2)) translateY(0px) translateX(15px);
+}
+
+.playerSides:nth-of-type(4){
+    transform: rotateY(90deg) translateZ(calc(250px/2)) translateY(0px) translateX(-15px);
+}
+
+.playerSides:nth-of-type(5){
+    transform: rotateY(90deg) rotateX(90deg) translateZ(calc(250px/2)) translateY(0px) translateX(-15px);
+}
+
+.playerSides:nth-of-type(6){
+    transform: rotateY(90deg) rotateX(270deg) translateZ(calc(250px/2)) translateY(0px) translateX(-15px);
+}
+
+
